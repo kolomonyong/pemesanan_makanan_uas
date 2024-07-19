@@ -34,7 +34,7 @@ $order_items_result = mysqli_query($conn, $order_items_query);
         <h2>Order ID: <?php echo $order['id']; ?></h2>
         <p>Customer Name: <?php echo htmlspecialchars($order['customer_name']); ?></p>
         <p>Table Number: <?php echo $order['table_number']; ?></p>
-        <p>Total Price: $<?php echo number_format($order['total_price'], 2); ?></p>
+        <p>Total Price: Rp<?php echo number_format($order['total_price'], 2); ?></p>
         <p>Order Time: <?php echo $order['order_time']; ?></p>
 
         <h3>Order Items</h3>
@@ -52,7 +52,7 @@ $order_items_result = mysqli_query($conn, $order_items_query);
                         <tr>
                             <td><?php echo htmlspecialchars($item['name']); ?></td>
                             <td><?php echo $item['quantity']; ?></td>
-                            <td>$<?php echo number_format($item['quantity'] * $item['price'], 2); ?></td>
+                            <td>Rp<?php echo number_format($order['total_price'], 2); ?></td>
                         </tr>
                     <?php endwhile; ?>
                 </tbody>

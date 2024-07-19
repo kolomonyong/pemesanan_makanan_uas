@@ -41,5 +41,54 @@ function checkout() {
         alert("Keranjangmu Kosong!");
         return;
     }
-    window.location.href = 'cart.php'; 
+    document.getElementById('checkoutModal').style.display = 'block';
 }
+
+function submitCheckout() {
+    const tableNumber = document.getElementById('tableNumber').value;
+    const customerName = document.getElementById('customerName').value;
+
+    if (!tableNumber || !customerName) {
+        alert("Nomor Meja dan Nama Pelanggan harus diisi!");
+        return;
+    }
+
+    const data = {
+        table_number: tableNumber,
+        customer_name: customerName,
+        cart: cart
+    };
+
+    fetch('checkout.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        if (response.redirected) {
+            window.location.href = response.url;
+        } else {
+            response.json().then(data => {
+                alert(data.message || "Order gagal.");
+            });
+        }
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('checkoutModal');
+    const closeModal = document.getElementsByClassName('close')[0];
+
+    closeModal.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+});

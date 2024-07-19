@@ -15,6 +15,7 @@ $result = mysqli_query($conn, "SELECT * FROM menus");
 
 <body>
     <header>
+        <a href="login_page.php">Admin Login</a>
         <h1>Sea Food Mas Rusdi</h1>
         <div class="cart-icon" onclick="toggleCart()">
             <i class="fas fa-shopping-cart"></i>
@@ -44,6 +45,22 @@ $result = mysqli_query($conn, "SELECT * FROM menus");
             <?php endwhile; ?>
         </div>
     </main>
+
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkoutForm">
+                <label for="tableNumber">Nomor Meja:</label>
+                <input type="text" id="tableNumber" name="tableNumber" required>
+                <label for="customerName">Nama Pelanggan:</label>
+                <input type="text" id="customerName" name="customerName" required>
+                <button type="button" onclick="submitCheckout()">Bayar</button>
+            </form>
+        </div>
+    </div>
+
+
     <footer>
         <p>&copy; 2024 Irfan Fauzan Rahman. All rights reserved.</p>
     </footer>

@@ -12,18 +12,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $query = "UPDATE menus SET name='$name', description='$description', price='$price' WHERE id=$id";
     if (mysqli_query($conn, $query)) {
-        header('Location: index.php');
+        header('Location: panel_admin.php');
     }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Edit Menu</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
+
 <body>
     <h1>Edit Menu</h1>
     <form action="edit_menu.php?id=<?php echo $id; ?>" method="POST">
@@ -36,4 +38,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Update Menu</button>
     </form>
 </body>
+
 </html>

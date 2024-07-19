@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost:4306";
+$servername = "127.0.0.1:4306:4306";
 $username = "root";
 $password = "";
 $dbname = "food_ordering";

@@ -19,6 +19,12 @@ header h1 {
     font-size: 2.5em;
 }
 
+header a {
+    text-align: left;
+    margin-left: 25px;
+    font-size: 1.5em;
+}
+
 .cart-icon {
     position: absolute;
     top: 20px;
@@ -144,6 +150,7 @@ button:hover {
 }
 
 footer {
+    margin-top: auto;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -168,7 +175,7 @@ label {
 }
 
 input[type="text"],
-input[type="number"],
+input[type="password"],
 textarea {
     width: 100%;
     padding: 10px;
@@ -186,19 +193,199 @@ button[type="submit"] {
     overflow-x: auto;
 }
 
+
+nav {
+    text-align: center;
+    margin: 20px;
+}
+
+nav a {
+    background-color: #ff6347;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #e5533d;
+}
+
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 th,
 td {
-    padding: 10px;
+    padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: #ff6347;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+td a {
+    color: #ff6347;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+td a:hover {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* Modal styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.receipt {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.receipt h2 {
+    margin-top: 0;
+}
+
+.receipt p {
+    margin: 5px 0;
+}
+
+.receipt ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.receipt ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.receipt ul li:last-child {
+    border-bottom: none;
+}
+
+.receipt .total {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.print-button,
+.back-button {
+    display: block;
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.receipt .print-button:hover,
+.receipt .back-button:hover {
+    background-color: #0056b3;
+}
+
+.social-share {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-share a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-share img {
+    width: 40px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-share img:hover {
+    transform: scale(1.2);
 }

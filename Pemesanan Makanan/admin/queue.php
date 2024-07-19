@@ -39,7 +39,7 @@ $orders_result = mysqli_query($conn, "SELECT * FROM orders ORDER BY order_time D
                             <td><?php echo $order['id']; ?></td>
                             <td><?php echo htmlspecialchars($order['customer_name']); ?></td>
                             <td><?php echo $order['table_number']; ?></td>
-                            <td>$<?php echo number_format($order['total_price'], 2); ?></td>
+                            <td>Rp<?php echo number_format($order['total_price'], 2); ?></td>
                             <td><?php echo $order['order_time']; ?></td>
                             <td><a href="order_details.php?order_id=<?php echo $order['id']; ?>">View Details</a></td>
                         </tr>

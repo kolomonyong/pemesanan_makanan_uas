@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $query = "INSERT INTO menus (name, description, price, image) VALUES ('$name', '$description', '$price', '$image')";
     if (mysqli_query($conn, $query)) {
-        header('Location: index.php');
+        header('Location: panel_admin.php');
     }
 }
 ?>
@@ -25,7 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-    <h1>Add New Menu</h1>
+    <header>
+        <h1>Add New Menu</h1>
+    </header>
     <form action="add_menu.php" method="POST" enctype="multipart/form-data">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>

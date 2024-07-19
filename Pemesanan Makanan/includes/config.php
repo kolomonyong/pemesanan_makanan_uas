@@ -1,5 +1,5 @@
 <?php
-define('DB_SERVER', 'localhost:4306');
+define('DB_SERVER', '127.0.0.1:4306');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DB_NAME', 'food_ordering');
