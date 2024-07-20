@@ -61,6 +61,9 @@ Proyek ini adalah sistem pemesanan makanan berbasis web yang dirancang untuk mem
 ## Struktur File
 
 - `index.php`: Halaman login utama.
+- `checkout.php`: Untuk memasukkan data pesanan ke database.
+- `login_page.php`: Halaman untuk login ke admin panel.
+- `order_success.php`: Halaman untuk menampilkan rincian dan total belanja dari pelanggan.
 - `admin/`: Direktori yang berisi halaman dan skrip terkait admin.
   - `panel_admin.php`: Dashboard admin.
   - `add_menu.php`: Halaman untuk menambah item menu baru.
