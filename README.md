@@ -83,10 +83,10 @@ Proyek ini adalah sistem pemesanan makanan berbasis web yang dirancang untuk mem
 
 1. Clone repository:
    ```sh
-   git clone https://github.com/yourusername/food-ordering-system.git
+   git clone https://github.com/kolomonyong/pemesanan_makanan_uas.git
 2. Arahkan ke direktori project:
    ```sh
-   cd food-ordering-system
+   cd pemesanan_makanan_uas
 3. Atur server web agar direct ke direktori project.
 4. Buka includes/config.php dan konfigurasikan pengaturan koneksi database Anda.
 5. Impor file SQL yang ada di main untuk mengatur database:
