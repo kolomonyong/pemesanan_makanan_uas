@@ -66,9 +66,9 @@ $order_items_result = mysqli_query($conn, $order_items_query);
 
     <div class="social-share">
         <p>Share Receipt:</p>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://yourwebsite.com/order_success.php?order_id=' . $order['id']); ?>" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a>
-        <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode('http://yourwebsite.com/order_success.php?order_id=' . $order['id']); ?>" target="_blank"><img src="assets/images/twitter.png" alt="Twitter"></a>
-        <a href="https://www.linkedin.com/shareArticle?url=<?php echo urlencode('http://yourwebsite.com/order_success.php?order_id=' . $order['id']); ?>&title=Order%20Receipt%20Details" target="_blank"><img src="assets/images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://127.0.0.1:4306/order_success.php?order_id=' . $order['id']); ?>" target="_blank"><img src="images/fblogo.png" alt="Facebook"></a>
+        <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode('http://127.0.0.1:4306/order_success.php?order_id=' . $order['id']); ?>" target="_blank"><img src="images/xlogo.jpg" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/shareArticle?url=<?php echo urlencode('http://127.0.0.1:4306/order_success.php?order_id=' . $order['id']); ?>&title=Order%20Receipt%20Details" target="_blank"><img src="images/linkedinlogo.png" alt="LinkedIn"></a>
 
         <footer>
             <p>&copy; 2024 Irfan Fauzan Rahman. All rights reserved.</p>
