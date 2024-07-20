@@ -1,5 +1,7 @@
 # Sistem Pemesanan Makanan
 
+![finalweb](https://github.com/user-attachments/assets/f57c2bf9-6d07-4035-bb17-bf75063426b4)
+
 Proyek ini adalah sistem pemesanan makanan berbasis web yang dirancang untuk memberikan pengalaman pemesanan yang cepat dan efisien bagi pelanggan dan administrator restoran. Berikut adalah detail tentang teknologi yang digunakan, fitur yang disediakan, dan hasil yang dicapai.
 
 ## Teknologi yang Digunakan
